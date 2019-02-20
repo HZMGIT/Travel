@@ -3,13 +3,21 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import faskClick from 'fastclick'
+import './assets/styles/reset.css'
+// 1像素边框
+import './assets/styles/border.css'
 
 Vue.config.productionTip = false
+faskClick.attach(document.body)
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
-  components: { App },
+  router: router,
+  components: { App: App },
   template: '<App/>'
 })
+
+//路由就是根据网址的不同，返回不同的页面内容给用户
+
